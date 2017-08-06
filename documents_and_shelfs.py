@@ -74,7 +74,7 @@ def move_doc_s_to_s():
     for enum_directories_key in directories.keys():
         if new_doc[1] in enum_directories_key:
             directories[enum_directories_key].append(new_doc[0])
-   
+    print(directories)
 # функция добавлени новой полки
 def add_new_shelf():
     print('Добавлени новой полки')
@@ -96,9 +96,18 @@ functions = {
     'as':add_new_shelf
 }
 
-# проверка правильного ввода от пользователя
+# проверка правильного вводо от пользователя
 def check_user_input():
-    user_input=input('введите команду ')
+    print(
+        "\np - people – Показать имя человека по номеру документа, "
+        "\nl – list – Показать список всех документов, "
+        "\ns – shelf – Показать номер полки по номеру документа"     
+        "\na – add – добавить новый документ"
+        "\nd – delete  – удалить документ по номеру"
+        "\nm – move  – переместить документ с полки на полку по номеру"
+        "\nas – add shelf – добавить новую полку"
+       )
+    user_input = input('\nвведите команду: ')
     if user_input.lower().strip() in {'p','l','s','a','d','m','as'}:
         return user_input.lower().strip()
 
@@ -106,11 +115,14 @@ def check_user_input():
 # главная функция
 def main():
    while True:
-     print('') # пробельчик для красоты
+     print('Вас приветствует Виртуальный секретарь. ')
+     print('Команды:')
      inp=check_user_input()
      if inp:
          print('')
          functions[inp]()
+
+
 
 
 main()
