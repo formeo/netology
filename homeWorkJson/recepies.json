@@ -1,0 +1,86 @@
+{   "recepies":[
+      {
+        "productName":"Омлет",
+         "quant_ingridients":3,
+         "ingridients":[
+            {
+               "ingridientName":"Яйца",
+               "ingridientQuant":2,
+               "ingridientUnits":"шт"
+            },
+            {
+               "ingridientName":"Молоко",
+               "ingridientQuant":50,
+               "ingridientUnits":"мл"
+            },
+            {
+               "ingridientName":"Помидор",
+               "ingridientQuant":100,
+               "ingridientUnits":"г"
+            }
+         ]
+      },
+      {
+       "productName":"Каша-вкусняша",
+       "quant_ingridients":4,
+        "ingridients":[
+              {
+               "ingridientName":"Каша",
+               "ingridientQuant":200,
+               "ingridientUnits":"г"
+            },
+            {
+               "ingridientName":"Молоко",
+               "ingridientQuant":50,
+               "ingridientUnits":"мл"
+            },
+            {
+               "ingridientName":"Масло",
+               "ingridientQuant":10,
+               "ingridientUnits":"г"
+            },
+            {
+               "ingridientName":"Сахар",
+               "ingridientQuant":20,
+               "ingridientUnits":"г"
+            }
+
+
+
+        ]
+      },
+      {
+         "productName":"Гренки",
+         "quant_ingridients":5,
+        "ingridients":[
+
+          {
+               "ingridientName":"Хлеб",
+               "ingridientQuant":200,
+               "ingridientUnits":"г"
+            },
+            {
+               "ingridientName":"Чеснок",
+               "ingridientQuant":10,
+               "ingridientUnits":"г"
+            },
+            {
+               "ingridientName":"Соль",
+               "ingridientQuant":2,
+               "ingridientUnits":"г"
+            },
+            {
+               "ingridientName":"Специи",
+               "ingridientQuant":2,
+               "ingridientUnits":"г"
+            },
+            {
+               "ingridientName":"Секретный ингридиент",
+               "ingridientQuant":1,
+               "ingridientUnits":"г"
+            }
+        ]
+
+      }
+   ]
+}

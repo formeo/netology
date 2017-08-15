@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recepies>
+   <recept>
+      <ingridientName>Омлет</ingridientName>
+      <ingridientcount>3</ingridientcount>
+      <ingridients>
+         <ingridient name = "Яйца" quant="2" units="шт"/>
+         <ingridient name = "Молоко" quant="50" units="г"/>
+         <ingridient name = "Помидор" quant="100" units="мл"/>
+       </ingridients>
+   </recept>
+   <recept>
+      <ingridientName>Каша</ingridientName>
+      <ingridientcount>4</ingridientcount>
+      <ingridients>
+        <ingridient name = "Каша" quant="200" units="г"/>
+        <ingridient name = "Молоко" quant="50" units="г"/>
+        <ingridient name = "Масло" quant="10" units="г"/>
+        <ingridient name = "Изюм" quant="20" units="г"/>
+      </ingridients>
+   </recept>
+    <recept>
+     <ingridientName>Гренки</ingridientName>
+     <ingridientcount>5</ingridientcount>
+        <ingridients>
+        <ingridient name = "Хлеб" quant="200" units="г"/>
+        <ingridient name = "Чеснок" quant="10" units="г"/>
+        <ingridient name = "Соль" quant="2" units="г"/>
+        <ingridient name = "Специи" quant="2" units="г"/>
+        <ingridient name = "Секретный ингридиент" quant="1" units="г"/>
+      </ingridients>
+   </recept>
+</recepies>
