@@ -18,29 +18,28 @@
 
 def get_all_dishes():
     dishes = {}
-    with open('recipies.txt', 'r') as dishFile:
-        for line in dishFile:
-            name_ingridient = line.rstrip().lower()
-            count_ingridients = dishFile.readline()
+    with open('recipies.txt', 'r') as dish_file:
+        for line in dish_file:
+            name_ingridient = line.strip().lower()
+            count_ingridients = dish_file.readline()
             i = 0
             sum_list = list()
-            while i < int(count_ingridients):
-                ingridient = dishFile.readline().split('|')
-                ingridient = [line.rstrip() for line in ingridient]
-                sum_list.append( dict(ingridient_name = ingridient[0],quantity = int(ingridient[1]),measure = ingridient[2]) )
+            for i in range(int(count_ingridients)):
+                ingridient = dish_file.readline().split('|')
+                ingridient = [line.strip() for line in ingridient]
+                sum_list.append( dict(ingridient_name = ingridient[0], quantity = int(ingridient[1]), measure = ingridient[2]))
                 dishes[name_ingridient] = sum_list
-                i += 1
-            dishFile.readline()
+            dish_file.readline()
     return dishes
 
 def show_current_menu(dishes_from_file):
     print('Сегодня в меню следующие блюда: ')
-    for enum in dishes_from_file.keys():
-        print(enum)
+    for dish_name in dishes_from_file:
+        print(dish_name)
     print(' ')
 
 
-def get_shop_list_by_dishes(dishes, person_count,dishes_from_file):
+def get_shop_list_by_dishes(dishes, person_count, dishes_from_file):
     shop_list = {}
     for dish in dishes:
         for ingridient in dishes_from_file[dish]:
@@ -66,7 +65,7 @@ def create_shop_list():
     person_count = int(input('Введите количество человек: '))
     dishes = input('Введите блюда в расчете на одного человека (через запятую): ') \
         .lower().split(', ')
-    shop_list = get_shop_list_by_dishes(dishes, person_count,dishes_from_file)
+    shop_list = get_shop_list_by_dishes(dishes, person_count, dishes_from_file)
     print_shop_list(shop_list)
 
 
