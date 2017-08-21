@@ -35,7 +35,7 @@ def show_current_menu(dishes_from_file):
     print(' ')
 
 
-def get_shop_list_by_dishes(dishes, person_count,dishes_from_file):
+def get_shop_list_by_dishes(dishes, person_count, dishes_from_file):
     shop_list = {}
     for dish in dishes:
         for ingridient in dishes_from_file[dish]:
