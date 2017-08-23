@@ -4,7 +4,7 @@ import collections
 import operator
 
 def delete_small_words(listname):
-    result_list=[]
+    result_list = []
     for i in listname:
         if len(i) >= 6:
             result_list.append(i)
