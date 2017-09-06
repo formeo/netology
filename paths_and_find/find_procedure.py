@@ -27,5 +27,6 @@ if __name__ == '__main__':
     find_list = get_file_list(os.path.join(migrations_dir, migrations))
     while True:
       search_text = input('Введите строку: ')
-      find_list = search_in_list(search_text.lower(), find_list)
+      find_list = search_in_list(search_text.lower(), find_list)    
       print_list(find_list)
+
