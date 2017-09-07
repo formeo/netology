@@ -1,9 +1,10 @@
 import json
-import  chardet
+import chardet
 import collections
 import operator
 import xml.etree.ElementTree as ET
 import codecs
+
 
 def delete_small_words(listname):
     result_list = []
@@ -12,12 +13,14 @@ def delete_small_words(listname):
             result_list.append(i)
     return result_list
 
+
 def decode_file_to_json(filename):
     with open(filename, 'rb') as file:
         data = file.read()
         result = chardet.detect(data)
         text = data.decode(result['encoding'])
         return json.loads(text)
+
 
 def print_list(in_list):
     for item in in_list:
@@ -40,12 +43,14 @@ def parse_file(filename):
     list_words = [x[0] for x in result_words]
     return list_words
 
+
 def detect_xml_coding(filename):
     result = {}
     with open(filename, 'rb') as file:
         data = file.read()
         result = chardet.detect(data)
     return result
+
 
 def parse_file_xml(filename):
     news_str = ''
@@ -54,7 +59,7 @@ def parse_file_xml(filename):
     root = tree.getroot()
     news_list = root.findall('channel')
     for news in news_list[0].findall('item'):
-        x=news.findall('description')
+        x = news.findall('description')
         for item in x:
             news_str += item.text
     news_list = delete_small_words(news_str.split(' '))
@@ -67,8 +72,6 @@ def parse_file_xml(filename):
     return list_words
 
 
-
-
 def get_all_news_from_json():
     print('Топ 10 слов в файле newsfr.json:')
     print_list(parse_file('newsfr.json'))
@@ -79,6 +82,7 @@ def get_all_news_from_json():
     print('Топ 10 слов в файле newscy.json:')
     print_list(parse_file('newscy.json'))
 
+
 def get_all_news_from_xml():
     print('Топ 10 слов в файле newsfr.xml:')
     print_list(parse_file_xml('newsfr.xml'))
@@ -88,6 +92,7 @@ def get_all_news_from_xml():
     print_list(parse_file_xml('newsafr.xml'))
     print('Топ 10 слов в файле newscy.xml:')
     print_list(parse_file_xml('newscy.xml'))
+
 
 def create_news_list():
     type_load = int(input('получить новости из 1 - json, 2 - xml '))
