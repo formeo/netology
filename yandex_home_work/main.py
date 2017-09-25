@@ -32,7 +32,7 @@ class GetYandexMetrika:
 
     def GetCounters(self):
         headers = self.getHeaders()
-        response = requests.get(self.management_url,headers=headers)
+        response = requests.get(self.management_url, headers=headers)
         return response.json()['counters']
 
     def GetData(self,params_in):
@@ -75,7 +75,7 @@ class GetYandexMetrika:
             visits += self.GetVisits(counter['id'])
             views += self.GetVievs(counter['id'])
             users += self.GetVisitors(counter['id'])
-        print('Всего визитов: {0}, просмотров: {1}, поситетелей: {2} '.format(visits,views,users))
+        print('Всего визитов: {0}, просмотров: {1}, поситетелей: {2} '.format(visits, views, users))
 
 
 metrika = GetYandexMetrika(APP_TOKEN)
