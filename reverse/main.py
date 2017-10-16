@@ -83,6 +83,11 @@ class LinkedListTestCase(unittest.TestCase):
                 items=[1, 2, 3],
                 expected_items=[3, 2, 1],
             ),
+
+            bfg=dict(
+                items=[1, 2, 3]
+                expected_items=[3, 2, 1],
+            ),
         )
         for case, data in cases.items():
             with self.subTest(case=case):
