@@ -89,6 +89,7 @@ class VkProcessing:
         len_group_list = len(group_list)
         for i, item in enumerate(group_list):
             print(i,' from ',len_group_list,' group processed')
+            time.sleep(0.5)
             if self.get_group_info(item) != {}:
                 result_list.append(self.get_group_info(item))
         res_file = self.write_file_class.create_result_file('groups.json')
